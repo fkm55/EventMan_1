@@ -1,0 +1,20 @@
+Array
+(
+    [message] => Hosted Link
+    [status] => success
+    [data] => Array
+        (
+            [checkout_url] => https://checkout.chapa.co/checkout/payment/idgDT9xNRtvzexiV06u3JesKsuAlU74JR8JD5uekSvHSr
+        )
+
+)
+Array
+(
+    [message] => Hosted Link
+    [status] => success
+    [data] => Array
+        (
+            [checkout_url] => https://checkout.chapa.co/checkout/payment/hABjFMDsoVRnvMnnwDZPqkOM7yulFvLflZHIfGY9kWTxF
+        )
+
+)

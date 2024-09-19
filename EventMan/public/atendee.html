@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Eventify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="font-semibold text-xl text-gray-800"><a href="#">Eventify</a></h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Dashboard</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Events</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8 flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4">
+            <ul class="space-y-4">
+                <li><a href="#" class="block text-blue-500 font-semibold hover:text-blue-700">Upcoming Events</a></li>
+                <li><a href="#" class="block text-blue-500 font-semibold hover:text-blue-700">Account Settings</a></li>
+                <!-- Add more tabs as needed -->
+            </ul>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <section class="w-3/4 px-6">
+            <!-- Upcoming Events Tab Content -->
+            <div class="tab-content">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Events</h2>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="text-blue-500 hover:underline">Event Name 1</a>
+                        <p class="text-gray-600">Date: Event Date 1</p>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-blue-500 hover:underline">Event Name 2</a>
+                        <p class="text-gray-600">Date: Event Date 2</p>
+                    </li>
+                    <!-- Add more upcoming events as needed -->
+                </ul>
+            </div>
+
+            <!-- Account Settings Tab Content -->
+            <div class="tab-content active">
+                <div class="flex items-center mb-6">
+                    <img src="https://via.placeholder.com/50" alt="Avatar" class="w-10 h-10 rounded-full mr-2">
+                    <h2 class="text-xl font-semibold text-gray-800">User Name</h2>
+                </div>
+                <!-- Profile details (non-editable) -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Profile Details</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Username</label>
+                            <p class="text-gray-600">user123</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Email</label>
+                            <p class="text-gray-600">user@example.com</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">First Name</label>
+                            <p class="text-gray-600">John</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Last Name</label>
+                            <p class="text-gray-600">Doe</p>
+                        </div>
+                        <!-- Add more profile details as needed -->
+                    </div>
+                </div>
+                <!-- Edit profile button -->
+                <div class="flex justify-end">
+                    <button id="editProfileBtn" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Edit Profile
+                    </button>
+                </div>
+                <!-- Form to change password -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 mt-6">Change Password</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="old-password" class="block text-sm font-medium text-gray-700">Old Password</label>
+                            <input type="password" id="old-password" name="old-password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="new-password" class="block text-sm font-medium text-gray-700">New Password</label>
+                            <input type="password" id="new-password" name="new-password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm New Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                Change Password
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Add more tab content sections as needed -->
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to handle tab switching and edit profile button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab-content');
+            const links = document.querySelectorAll('aside a');
+            const editProfileBtn = document.getElementById('editProfileBtn');
+
+            links.forEach((link, index) => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+
+                    tabs[index].classList.add('active');
+                });
+            });
+
+            // Function to handle opening edit profile modal
+            editProfileBtn.addEventListener('click', function () {
+                // Add your code here to show the edit profile modal
+                alert('Edit profile modal will be shown here.');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

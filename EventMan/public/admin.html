@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard - Eventify</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .sub-tab-content {
+            display: none;
+        }
+
+        .sub-tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="font-semibold text-xl text-gray-800"><a href="#">Eventify</a></h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Dashboard</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Events</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8 flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4">
+            <ul class="space-y-4">
+                <li><a href="#manageAccounts" class="block text-blue-500 font-semibold hover:text-blue-700">Manage Accounts</a>
+                    <ul class="ml-4 space-y-2">
+                        <li><a href="#searchUsers" class="block text-gray-500 font-normal hover:text-gray-700">Search Users</a></li>
+                        <li><a href="#createUser" class="block text-gray-500 font-normal hover:text-gray-700">Create User</a></li>
+                        <li><a href="#editAccount" class="block text-gray-500 font-normal hover:text-gray-700">Edit Account</a></li>
+                        <li><a href="#terminateAccount" class="block text-gray-500 font-normal hover:text-gray-700">Terminate Account</a></li>
+                    </ul>
+                </li>
+                <li><a href="#events" class="block text-blue-500 font-semibold hover:text-blue-700">Events</a>
+                    <ul class="ml-4 space-y-2">
+                        <li><a href="#createEvent" class="block text-gray-500 font-normal hover:text-gray-700">Create Event</a></li>
+                        <li><a href="#editEvent" class="block text-gray-500 font-normal hover:text-gray-700">Edit Event</a></li>
+                        <li><a href="#deleteEvent" class="block text-gray-500 font-normal hover:text-gray-700">Delete Event</a></li>
+                    </ul>
+                </li>
+                <li><a href="#tickets" class="block text-blue-500 font-semibold hover:text-blue-700">Tickets</a>
+                    <ul class="ml-4 space-y-2">
+                        <li><a href="#createTicket" class="block text-gray-500 font-normal hover:text-gray-700">Create Ticket</a></li>
+                        <li><a href="#manageTicket" class="block text-gray-500 font-normal hover:text-gray-700">Manage Ticket</a></li>
+                        <li><a href="#deleteTicket" class="block text-gray-500 font-normal hover:text-gray-700">Delete Ticket</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <section class="w-3/4 px-6">
+            <!-- Manage Accounts Tab Content -->
+            <div id="manageAccounts" class="tab-content active">
+                <!-- Search Users Sub Tab Content -->
+                <div id="searchUsers" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Search Users</h2>
+                    <!-- Content for searching users goes here -->
+                    <p>Search Users Content</p>
+                </div>
+                <!-- Create User Sub Tab Content -->
+                <div id="createUser" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Create User</h2>
+                    <!-- Content for creating user goes here -->
+                    <p>Create User Content</p>
+                </div>
+                <!-- Edit Account Sub Tab Content -->
+                <div id="editAccount" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Edit Account</h2>
+                    <!-- Content for editing account goes here -->
+                    <p>Edit Account Content</p>
+                </div>
+                <!-- Terminate Account Sub Tab Content -->
+                <div id="terminateAccount" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Terminate Account</h2>
+                    <!-- Content for terminating account goes here -->
+                    <p>Terminate Account Content</p>
+                </div>
+            </div>
+
+            <!-- Events Tab Content -->
+            <div id="events" class="tab-content">
+                <!-- Create Event Sub Tab Content -->
+                <div id="createEvent" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Create Event</h2>
+                    <!-- Content for creating event goes here -->
+                    <p>Create Event Content</p>
+                </div>
+                <!-- Edit Event Sub Tab Content -->
+                <div id="editEvent" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Edit Event</h2>
+                    <!-- Content for editing event goes here -->
+                    <p>Edit Event Content</p>
+                </div>
+                <!-- Delete Event Sub Tab Content -->
+                <div id="deleteEvent" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Delete Event</h2>
+                    <!-- Content for deleting event goes here -->
+                    <p>Delete Event Content</p>
+                </div>
+            </div>
+
+            <!-- Tickets Tab Content -->
+            <div id="tickets" class="tab-content">
+                <!-- Create Ticket Sub Tab Content -->
+                <div id="createTicket" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Create Ticket</h2>
+                    <!-- Content for creating ticket goes here -->
+                    <p>Create Ticket Content</p>
+                </div>
+                <!-- Manage Ticket Sub Tab Content -->
+                <div id="manageTicket" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Manage Ticket</h2>
+                    <!-- Content for managing ticket goes here -->
+                    <p>Manage Ticket Content</p>
+                </div>
+                <!-- Delete Ticket Sub Tab Content -->
+                <div id="deleteTicket" class="sub-tab-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Delete Ticket</h2>
+                    <!-- Content for deleting ticket goes here -->
+                    <p>Delete Ticket Content</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to handle tab switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab-content');
+            const subTabs = document.querySelectorAll('.sub-tab-content');
+            const links = document.querySelectorAll('aside a');
+
+            links.forEach((link, index) => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+
+                    subTabs.forEach(subTab => {
+                        subTab.classList.remove('active');
+                    });
+
+                    tabs[index].classList.add('active');
+                    subTabs[index * 4].classList.add('active'); // Index * 4 because there are 4 sub-tabs for each main tab
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
